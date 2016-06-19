@@ -1,0 +1,160 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-bottom: 40px;
+    color: #5a5a5a;
+    font-size: 18px;
+}
+
+.h2, h2 {
+
+    font-size: 27px;
+}
+
+#greyBox {
+    text-align: center;
+}
+
+header{
+    z-index: 100;
+    top: 0px;
+    width: 100%;
+    border-bottom: 5px solid #0377D4;
+    background-color: #FFF;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+#about{
+    min-height: 1000px;
+    background: url("/images/bg.png"); 
+    background-repeat: no-repeat;
+    background-color: #c3c5c5;
+}
+#about .contentBox{
+    min-height: 1000px;
+}
+#about figure{
+    background-color: rgba(255,255,255, .6);
+    margin-bottom: 50px;
+    box-shadow: 3px 3px 3px #888888;
+} 
+#about figure img{
+    padding: 5px;
+    margin:auto;
+}
+#about figcaption{
+    color: grey;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+.snail{
+    position: relative;
+    bottom: 0px;
+}
+.contentBox{
+    background-color: rgba(255,255,255, .6);
+    height: 100%;
+
+}
+#contact{
+    min-height: 1000px;
+    background: url("/images/bg2.png");
+}
+
+#login .contentBox {
+    box-shadow: 10px 10px 10px #888888;
+}
+.loginArea{
+    padding-bottom:30px; 
+}
+
+#services{
+    /*background: 
+    radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent) 0 -50px;
+    background-size:75px 100px;*/
+    background-color: #cad9db;
+    border-top: 10px solid #0377D4;
+    border-bottom: 10px solid #0377D4;
+    min-height: 1000px;
+    box-shadow: 0 10px 10px #888888;
+}
+#services figure {
+    background-color: #0377D4;
+    color: #FFF;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    border: 10px solid #FFF;
+    margin-top: 15px;
+    box-shadow: 10px 10px 10px #888888;
+}
+#services figcaption {
+    background-color: #FFF;
+    border-radius: 0px;
+    padding: 10px;
+    color: #000;
+}
+.logo{
+    width: auto;
+    height: 150px;
+
+}
+.topFix{
+    margin-top:50px;
+    padding-bottom: 20px;
+}
+
+footer{
+
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    border-top: 5px solid #0377D4;
+    background-color: #FFF;
+}
+
+footer p{
+    padding: 30px;
+    font-size: 12pt;
+}
+
+form{
+    background-color: #FFF;
+    border: 5px solid #0377D4;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+form legend{
+    background-color: #0377D4;
+    color: #FFF;
+    padding: 10px;
+}
+
+#contactForm{
+
+    width: 450px;
+
+}
+
+#systemLogin{
+
+    margin-bottom: 20px;
+
+}
+
+#bulletPoint {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+    margin-bottom: -20px;
+}
