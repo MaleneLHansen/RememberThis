@@ -29,4 +29,16 @@ class User extends Authenticatable
     public function projects(){
         return $this->hasMany('App\Project');
     }
+
+    public function contacts(){
+        return $this->hasMany('App\Contact')->whereIn('status', [1, 2]);
+    }
+
+    public function projecttypes(){
+        return $this->hasMany('App\ProjectType')->whereIn('status', [1,2]);
+    }
+
+    public function qoutes(){
+        return $this->hasMany('App\Qoute')->where('active', 1);
+    }
 }
