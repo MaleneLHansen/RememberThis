@@ -13,7 +13,7 @@ class ProjectRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class ProjectRequest extends Request
     public function rules()
     {
         return [
-            //
+            'name' => 'required', 
+            'description' => 'required'
         ];
     }
 }

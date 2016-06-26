@@ -42,20 +42,25 @@
         @foreach ($projects as $project)
         <tr>
             <td>{{$project->name}}</td>
+
             <td>{{$project->description}}</td>
-            <td>{{$project->beginDate}}</td>
-            <td>{{$project->contact->name . '<br>' . $project->contact->email }}</td>
-            <td>{{$project->projectype->name}}</td>
-            <td>{{$contact->status == 1 ? _('Active') : _('Deactivated') }}</td>
+            
+            <td>{{$project->beginDate->format('d-m-Y')}}</td>
+            
+            <td>{!!$project->contact->name . '<br>' . $project->contact->email !!}</td>
+            
+            <td>{{$project->projecttype->name}}</td>
+
+            <td>{{$project->status == 1 ? _('Active') : _('Deactivated') }}</td>
             
             <td>
                 
-                <a class="btn btn-primary" href="{{route('project.edit', $contact->id)}}"><i class="fa fa-fw fa-cog"></i> {{_('Edit') }}</a>
+                <a class="btn btn-primary" href="{{route('project.edit', $project->id)}}"><i class="fa fa-fw fa-cog"></i> {{_('Edit') }}</a>
                 <button name='deactivateDepotCategory' class="btn btn-warning" data-id = '{{$project->id}}'><i class="fa fa-fw fa-minus-circle"></i> {{_('Deactivate') }}</button>
                 
                 
                 <button name='deleteDepotCategory' class="btn btn-danger" data-id = '{{$project->id}}'><i class="fa fa-fw fa-times"></i> {{_('Delete') }}</button>
-                
+                <a class="btn btn-success" href="#"><i class="fa fa-fw fa-bomb"></i> {{_('See More')}}</a>
             </td>
             
         </tr>

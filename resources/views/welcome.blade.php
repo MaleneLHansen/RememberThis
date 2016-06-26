@@ -11,7 +11,7 @@
             <i class="fa fa-comments fa-5x"></i>
             </div>
             <div class="col-xs-9 text-right">
-            <div class="huge">26</div>
+            <div class="huge">{{$unfinishedCount}}</div>
             
             </div>
             </div>
@@ -35,7 +35,7 @@
             <i class="fa fa-comments fa-5x"></i>
             </div>
             <div class="col-xs-9 text-right">
-            <div class="huge">26</div>
+            <div class="huge">22</div>
             
             </div>
             </div>
@@ -59,7 +59,7 @@
             <i class="fa fa-comments fa-5x"></i>
             </div>
             <div class="col-xs-9 text-right">
-            <div class="huge">26</div>
+            <div class="huge">{{$finishedCount}}</div>
             </div>
             </div>
             <a href="#">
@@ -106,6 +106,16 @@
 <hr>
 </div>
 
+@if (count($qoutes) == 0)
+<div class="col-md-12 col-sm-12">
+{{_("You currently don't have any qoutes saved")}}
+</div>
+<div class="form-group col-md-12 col-sm-12">
+<a href="{{route('qoute.new')}}" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> {{_('Create new')}}</a>
+</div>
+
+@else
+
 @foreach ($qoutes as $qoute)
 <div class="col-md-3 col-sm-3">
     <div class="alert alert-{{$qoute->type}}">
@@ -115,6 +125,7 @@
 
 @endforeach
 
+@endif
 
 </div>
 

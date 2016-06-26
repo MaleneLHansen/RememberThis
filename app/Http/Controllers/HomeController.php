@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use \App\Qoute as Qoute;
+use \App\Project as Project; 
 
 class HomeController extends Controller
 {
@@ -16,8 +17,11 @@ class HomeController extends Controller
 
     public function home(){
     	$qoutes = Qoute::orderByRaw('RAND()')->where('user_id', \Auth::user()->id)->where('active', 1)->take(4)->get();;
+    	$finishedproject = Project::where('status', 2)->count();
+    	$unfinishedproject = Project::where('status', 1)->count(); 
 
-    	return view('welcome')->with(['qoutes' => $qoutes]);
+
+    	return view('welcome')->with(['qoutes' => $qoutes, 'finishedCount' => $finishedproject, 'unfinishedCount' => $unfinishedproject]);
 
     }
 }

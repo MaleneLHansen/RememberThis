@@ -10,12 +10,18 @@ class Project extends Model
 
     protected $fillable = ['name', 'description'];
 
+    protected $dates = ['beginDate'];
+
     public function tasks(){
     	return $this->hasMany('App\Task');
     }
 
     public function notes(){
     	return $this->hasMany('App\Note');
+    }
+
+    public function projecttype(){
+    	return $this->belongsTo('App\ProjectType');
     }
 	
 	public function contact(){
