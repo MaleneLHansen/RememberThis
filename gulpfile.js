@@ -18,6 +18,7 @@ elixir(function(mix) {
         '../css/sb-admin-2.css',
         '../css/custom.css',
         'app.scss',
+        '../css/selectize.css',
         '../css/select2.css',
         '../dist/morrisjs/morris.css',
         '../dist/font-awesome/scss/font-awesome.scss',
@@ -40,6 +41,7 @@ elixir(function(mix) {
         'bootstrap-datetimepicker.js',
         'sb-admin-2.js',
         'select2.js',
+        'selectize.js',
     ], 'public/js/application.js')
 
     mix.scripts(['jquery.js',

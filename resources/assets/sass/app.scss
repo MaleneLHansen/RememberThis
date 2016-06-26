@@ -5,17 +5,17 @@ $lineheight: 1.6;
 @import "bootstrap-datetimepicker/_bootstrap-datetimepicker.scss";
 #statRight {
     width: 30%;
-}
+} 
 
 #statLeft {
     width: 70%;
-}
+} 
 
 .consumption-customer,
 .simple-all-municipality,
 .explicit-all-customers,
 .explicit-single-municipality {
-    & tbody tr:nth-child(odd) {
+    & tbody tr:nth-child(odd) { 
         background-color: #ccc;
     }
 }
@@ -110,6 +110,15 @@ a.back-to-top i {
     border-color: #154C42;
     color: white;
 }
+.panel-primary {
+    border-color: #4789CF;
+    text-color: #4789CF;
+}
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #4789CF;
+    border-color: #4789CF;
+}
 
 #printBtn {
     float: right;
@@ -118,7 +127,7 @@ a.back-to-top i {
 
 #mailBtn {
     float: right;
-}
+} 
 
 .navbar-brand {
     height: 85px;
@@ -126,7 +135,7 @@ a.back-to-top i {
 }
 
 .navbar-brand>img {
-    max-height: 75px;
+    max-height: 75px; 
 }
 
 .up {
