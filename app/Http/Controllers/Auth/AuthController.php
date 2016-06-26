@@ -28,7 +28,10 @@ class AuthController extends Controller
      *
      * @var string
      */
+    
     protected $redirectTo = '/';
+    private $loginPath;
+    protected $redirectAfterLogout = 'auth/login';
 
     /**
      * Create a new authentication controller instance.
@@ -46,27 +49,20 @@ class AuthController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+        public function getLogout()
+    { 
+        \Auth::logout();
+        \Session::flush();
+        return redirect('/auth/login');
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return User
-     */
-    protected function create(array $data)
+
+    public function postLogin(\Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        if (\Auth::attempt(['email' => $request::input('email'), 'password' => $request::input('password'), 'status' => 1])) {
+            return redirect()->intended($this->redirectPath());
+        } else {
+            return redirect($this->loginPath);
+        }
     }
 }
