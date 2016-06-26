@@ -10,7 +10,7 @@
             <li><a href="#">Malene Lykke Hansen </a></li>
             
             <li class="divider"></li>
-            <li><a href="{{ url('/customer/logout') }}">{{ _('Logout') }}</a></li>
+            <li><a href="{{ url('/auth/logout') }}">{{ _('Logout') }}</a></li>
             
         </ul>
         <!-- /.dropdown-user -->
