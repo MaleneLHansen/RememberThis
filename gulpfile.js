@@ -12,13 +12,17 @@ var elixir = require('laravel-elixir');
  */
 elixir.config.js.folder = 'javascript';
 elixir(function(mix) {
+
+	mix.copy('node_modules/selectize/dist/', 'resources/assets/dist/selectize');
+	
+
     mix.sass([
         '../dist/metisMenu/metisMenu.css',
         '../css/timeline.css',
         '../css/sb-admin-2.css',
         '../css/custom.css',
         'app.scss',
-        '../css/selectize.css',
+        '../dist/selectize/css/selectize.css',
         '../css/select2.css',
         '../dist/morrisjs/morris.css',
         '../dist/font-awesome/scss/font-awesome.scss',
@@ -36,12 +40,13 @@ elixir(function(mix) {
         '../dist/bootstrap/bootstrap.js',
         '../dist/metisMenu/metisMenu.js',
         '../dist/raphael/raphael.js',
+        '../dist/selectize/js/standalone/selectize.js',
         '../dist/morrisjs/morris.js',
+        
         'moment.js',
         'bootstrap-datetimepicker.js',
         'sb-admin-2.js',
         'select2.js',
-        'selectize.js',
     ], 'public/js/application.js')
 
     mix.scripts(['jquery.js',

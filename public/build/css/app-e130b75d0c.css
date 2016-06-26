@@ -7187,9 +7187,10 @@ a.back-to-top i {
 .navbar-right {
   margin-right: 0px; }
 
+@charset "UTF-8";
 /**
- * selectize.css (v0.11.0)
- * Copyright (c) 2013 Brian Reavis & contributors
+ * selectize.css (v0.12.2)
+ * Copyright (c) 2013–2015 Brian Reavis & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
  * file except in compliance with the License. You may obtain a copy of the License at:
@@ -7287,6 +7288,12 @@ a.back-to-top i {
 .selectize-control.plugin-remove_button .disabled [data-value] .remove {
   border-left-color: #ffffff; }
 
+.selectize-control.plugin-remove_button .remove-single {
+  position: absolute;
+  right: 28px;
+  top: 6px;
+  font-size: 23px; }
+
 .selectize-control {
   position: relative; }
 
@@ -7360,6 +7367,7 @@ a.back-to-top i {
   border: 0 solid #ffffff; }
 
 .selectize-input > input {
+  display: inline-block !important;
   padding: 0 !important;
   min-height: 0 !important;
   max-height: none !important;
