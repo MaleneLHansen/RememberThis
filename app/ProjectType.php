@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProjectType extends Model
 {
-    protected $table = 'projettype';
+    protected $table = 'projecttype';
 
-    protected $fillable = 'projecttype';
+    protected $fillable = ['name'];
 
     public function projects(){
     	return $this->hasMany('App\Project');
