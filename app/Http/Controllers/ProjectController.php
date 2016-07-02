@@ -22,7 +22,7 @@ class ProjectController extends Controller
     public function index(){
 
     	$project = Project::whereIn('status', [1,2])->get(); 
-    	return view('project.overview')->with('projects', $project);
+    	return view('project.overview')->with('projects', $project)->with('type', null);
     }
 
     public function delete(Project $project){
@@ -72,7 +72,19 @@ class ProjectController extends Controller
 	}
 
 	public function info(Project $project){
+		return view ('project.info')->with(['project' => $project]);
+	}
 
+	public function filter($type){
+
+		if ($type == 'active' ){
+			$projects = Project::where('status', 1)->get();
+		} else if ($type == 'all'){
+			$projects = Project::get(); 
+		} else if ($type == 'completed'){
+			$projects = Project::where('status', 2)->get();
+		}
+    	return view('project.overview')->with('projects', $projects)->with('type', $type);
 	}
 
 }

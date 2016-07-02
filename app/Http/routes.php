@@ -55,13 +55,15 @@ Route::group(array('prefix' => 'projecttype'), function() {
 	Route::post('new', ['as' => 'projecttype.create', 'uses' => 'ProjectTypeController@create']);
 });
 
-Route::group(array('prefix' => 'project'), function() {
+Route::group(array('prefix' => 'project'), function() { 
 	Route::get('/', ['as' => 'project.all', 'uses' => 'ProjectController@index']);
+	Route::get('/search={type}', ['as' => 'project.all.search', 'uses' => 'ProjectController@filter']);
 	Route::delete('delete/{project}', ['as' => 'project.delete', 'uses' => 'ProjectController@delete']);
 	Route::get('edit/{project}', ['as' => 'project.edit', 'uses' => 'ProjectController@edit']);
 	Route::patch('edit/{project}', ['as' => 'project.update', 'uses' => 'ProjectController@update']);
 	Route::get('new', ['as' => 'project.new', 'uses' => 'ProjectController@new']);
 	Route::post('new', ['as' => 'project.create', 'uses' => 'ProjectController@create']);
+	Route::get('/info/{project}', ['as' => 'project.info', 'uses' => 'ProjectController@info']);
 });
 
 

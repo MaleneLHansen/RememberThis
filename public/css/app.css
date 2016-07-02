@@ -6429,6 +6429,9 @@ button.close {
 .bootstrap-datetimepicker-widget .datepicker-years table thead tr:first-child th {
   cursor: default; }
 
+.page-header {
+  margin-top: -5px; }
+
 #statRight {
   width: 30%; }
 

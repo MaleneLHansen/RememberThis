@@ -47,7 +47,7 @@
             <div id="page-wrapper">
                 <div class="row">
                     <div id='page-header' class="col-md-12">
-                        <h1 class="page-header">@yield('title', '')</h1>
+                        <h2 class="page-header">@yield('title', '')</h2>
                     </div>
                     @yield('content')
 

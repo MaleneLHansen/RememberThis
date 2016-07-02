@@ -4,15 +4,23 @@
 @section('content')
 
 
-<div id='stuck'>
-    <div class="col-md-8">
-        <div class="form-group">
-            {!! Form::label('search', _('Search'),['class' => 'col-xs-3 control-label']) !!}
-            <div class="col-md-6">
-                {!! Form::text('search', null, array('class' => 'form-control', 'id' => 'search')) !!} 
-            </div>
-        </div> 
-    </div>
+
+<div class="col-md-8">
+    <div class="form-group">
+        {!! Form::label('search', _('Search'),['class' => 'col-xs-3 control-label']) !!}
+        <div class="col-md-6">
+            {!! Form::text('search', null, array('class' => 'form-control', 'id' => 'search')) !!} 
+        </div>
+    </div> 
+</div>
+
+
+<div class="col-md-12">
+	<ul class="nav nav-tabs">
+		<li role="presentation" class={{$type == null ? "active" : "" }}><a href="{{route('project.all')}}">{{'All'}}</a></li>
+  		<li role="presentation" class={{$type == 'active' ? "active" : ""}}><a href="{{route('project.all.search', 'active')}}">{{_('Active')}} </a></li>
+  		<li role="presentation" class={{$type == 'completed' ? "active" : ""}}><a href="{{route('project.all.search', 'completed')}}"> {{_('Completed')}}</a></li>
+	</ul>
 </div>
 
 <table class="table table-striped depotcats" id ="maintable">
@@ -55,12 +63,10 @@
             
             <td>
                 
-                <a class="btn btn-primary" href="{{route('project.edit', $project->id)}}"><i class="fa fa-fw fa-cog"></i> {{_('Edit') }}</a>
-                <button name='deactivateDepotCategory' class="btn btn-warning" data-id = '{{$project->id}}'><i class="fa fa-fw fa-minus-circle"></i> {{_('Deactivate') }}</button>
-                
+                <a class="btn btn-primary" href="{{route('project.edit', $project->id)}}"><i class="fa fa-fw fa-cog"></i> {{_('Edit') }}</a>               
                 
                 <button name='deleteDepotCategory' class="btn btn-danger" data-id = '{{$project->id}}'><i class="fa fa-fw fa-times"></i> {{_('Delete') }}</button>
-                <a class="btn btn-success" href="#"><i class="fa fa-fw fa-bomb"></i> {{_('See More')}}</a>
+                <a class="btn btn-success" href="{{route('project.info', $project->id)}}"><i class="fa fa-fw fa-bomb"></i> {{_('See More')}}</a>
             </td>
             
         </tr>

@@ -3,12 +3,17 @@ $lightGray: #D6D7D9;
 $lineheight: 1.6;
 @import "bootstrap/_bootstrap.scss";
 @import "bootstrap-datetimepicker/_bootstrap-datetimepicker.scss";
+
+.page-header {
+    margin-top: -5px;
+}
+
 #statRight {
     width: 30%;
 } 
 
 #statLeft {
-    width: 70%;
+    width: 70%; 
 } 
 
 .consumption-customer,
