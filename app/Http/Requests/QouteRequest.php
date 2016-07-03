@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace app\Http\Requests;
 
 use App\Http\Requests\Request;
 
@@ -24,7 +24,7 @@ class QouteRequest extends Request
     public function rules()
     {
         return [
-            'text' => 'required', 
+            'text' => 'required',
             'type' => 'required'
         ];
     }

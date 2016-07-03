@@ -20,8 +20,6 @@ class CreateQouteTable extends Migration
             $table->string('type');
             $table->timestamps();
         });
-
-
     }
 
     /**

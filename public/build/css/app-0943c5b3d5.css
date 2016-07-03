@@ -6438,6 +6438,23 @@ button.close {
 #statLeft {
   width: 70%; }
 
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.228571429;
+  border-radius: 15px; }
+
+.btn-circle.btn-lg, .btn-group-lg > .btn-circle.btn {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px; }
+
 .consumption-customer tbody tr:nth-child(odd),
 .simple-all-municipality tbody tr:nth-child(odd),
 .explicit-all-customers tbody tr:nth-child(odd),

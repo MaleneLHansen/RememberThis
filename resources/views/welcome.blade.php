@@ -15,7 +15,7 @@
             
             </div>
             </div>
-            <a href="#">
+            <a href="{{route('project.all.search', 'active')}}">
                 <div class="panel-footer">
                 <span class="pull-left">Unfinished Projects</span>
                 
@@ -62,7 +62,7 @@
             <div class="huge">{{$finishedCount}}</div>
             </div>
             </div>
-            <a href="#">
+            <a href="{{route('project.all.search', 'completed')}}">
                 <div class="panel-footer">
                 <span class="pull-left">Finished projects</span>
                 

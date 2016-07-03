@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,8 +10,8 @@ class ProjectType extends Model
 
     protected $fillable = ['name'];
 
-    public function projects(){
-    	return $this->hasMany('App\Project');
+    public function projects()
+    {
+        return $this->hasMany('App\Project');
     }
-
 }

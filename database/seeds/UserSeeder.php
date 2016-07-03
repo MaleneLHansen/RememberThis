@@ -11,13 +11,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $user = new App\User(); 
+        $user = new App\User();
         $user->name = 'Malene Lykke Hansen';
         $user->email = 'mlh@zenteo.dk';
         $user->phone = 42373991;
         $user->password = \Hash::make('Malene87s');
-        $user->status = 1; 
-        $user->save(); 
-
+        $user->status = 1;
+        $user->save();
     }
 }

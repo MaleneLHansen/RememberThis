@@ -1,0 +1,315 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MultilanguageLaravelApplication\n"
+"POT-Creation-Date: 2016-07-03 17:53+0200\n"
+"PO-Revision-Date: 2016-07-03 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: James Translator <james@translations.colm>\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-KeywordsList: _;__;gettext;_n:1,2;ngettext:1,2\n"
+"X-Poedit-Basepath: ../../../../../app\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: Http/Controllers\n"
+"X-Poedit-SearchPath-1: ../resources/views\n"
+"X-Poedit-SearchPath-2: Console/Commands\n"
+"X-Poedit-SearchPath-3: ../storage/framework/messages\n"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:1
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:1
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:2
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:10
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:1
+msgid "Projects"
+msgstr "Projekter"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:4
+msgid "Edit Project"
+msgstr "Rediger Projekt"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:6
+msgid "Create New Project"
+msgstr "Lav nyt Projekt"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:31
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:40
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:20
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:28
+#: ../storage/framework/messages/72fe6327304a0e36ae4564d7119495812d3ae340.php.php:28
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:20
+msgid "Name"
+msgstr "Navn"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:39
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:41
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:15
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:49
+msgid "Start date"
+msgstr "Startdato"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:53
+msgid "dd/mm/yyyy"
+msgstr "dd/mm/yyyy"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:62
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:43
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:29
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ../storage/framework/messages/0461242c516932cfc41784300420f0b9463e7f00.php.php:71
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:44
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:28
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:37
+msgid "Project Type"
+msgstr "Projekt Type"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:1
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:1
+#: ../storage/framework/messages/72fe6327304a0e36ae4564d7119495812d3ae340.php.php:1
+#: ../storage/framework/messages/8bee23301257e5aada606c3fc14af1120f23e712.php.php:1
+#: ../storage/framework/messages/db719945c98cfba24f3a2f079a8086e541163836.php.php:1
+msgid "Malene Lykke Hansen"
+msgstr "Malene Lykke Hansen"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:4
+msgid "Edit Qoute"
+msgstr "Rediger Citat"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:6
+msgid "New Qoute"
+msgstr "Nyt Citat"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:28
+msgid "Text"
+msgstr "Tekst"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:36
+msgid "Type"
+msgstr "Type"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:39
+msgid "Yellow"
+msgstr "Gul"
+
+#: ../storage/framework/messages/15406af21a65e225592b69afd01345fa6dad675c.php.php:44
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:52
+#: ../storage/framework/messages/72fe6327304a0e36ae4564d7119495812d3ae340.php.php:36
+msgid "Save"
+msgstr "Gem"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:9
+msgid "Search"
+msgstr "Søg"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:21
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:63
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:30
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:34
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:46
+msgid "Active"
+msgstr "Aktiv"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:22
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:46
+msgid "Completed"
+msgstr "Færdig"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:42
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:22
+msgid "Start Date"
+msgstr "Startdato"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:45
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:21
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:23
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:43
+msgid "Status"
+msgstr "Status"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:46
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:22
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:24
+msgid "Actions"
+msgstr "Handlinger"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:63
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:30
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:34
+msgid "Deactivated"
+msgstr "Deaktiveret"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:67
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:34
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:38
+#: ../storage/framework/messages/db719945c98cfba24f3a2f079a8086e541163836.php.php:33
+msgid "Edit"
+msgstr "Rediger"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:69
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:38
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:42
+#: ../storage/framework/messages/db719945c98cfba24f3a2f079a8086e541163836.php.php:31
+msgid "Delete"
+msgstr "Slet"
+
+#: ../storage/framework/messages/249b885520e9675b89c38ebdd1c0d851de7c9a9a.php.php:70
+msgid "See More"
+msgstr "Se mere"
+
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:8
+msgid "Whoops!"
+msgstr "Hov!"
+
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:8
+msgid "There were some problems with your input."
+msgstr "Der er nogle problemer med dit input."
+
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:29
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:36
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:21
+msgid "Email"
+msgstr "Email"
+
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:30
+msgid "E-mail"
+msgstr "Email"
+
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:33
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:35
+msgid "Password"
+msgstr "Kodeord"
+
+#: ../storage/framework/messages/305c6a2df7bc14507126c7b49c7ff0b8f5e55a66.php.php:37
+msgid "Login"
+msgstr "Login"
+
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:1
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:2
+msgid "Project Types"
+msgstr "Projekt Typer"
+
+#: ../storage/framework/messages/3e103ad7f788d5f96f0db617e84e88f7899ee0cf.php.php:35
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:39
+msgid "Deactivate"
+msgstr "Deaktiver"
+
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:4
+msgid "Edit Contact"
+msgstr "Rediger Kontakt"
+
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:6
+msgid "New Contact"
+msgstr "Ny Kontakt"
+
+#: ../storage/framework/messages/479841022f01b4250a017d27bbec404ac4cf1632.php.php:44
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:22
+msgid "Phone"
+msgstr "Telefon"
+
+#: ../storage/framework/messages/72fe6327304a0e36ae4564d7119495812d3ae340.php.php:4
+msgid "Edit Project Type"
+msgstr "Rediger Projekt Type"
+
+#: ../storage/framework/messages/72fe6327304a0e36ae4564d7119495812d3ae340.php.php:6
+msgid "New Project Type"
+msgstr "Ny Projekt Type"
+
+#: ../storage/framework/messages/8bee23301257e5aada606c3fc14af1120f23e712.php.php:2
+msgid "Welcome"
+msgstr "Velkommen"
+
+#: ../storage/framework/messages/8bee23301257e5aada606c3fc14af1120f23e712.php.php:104
+msgid "Did you know?"
+msgstr "Vidste du?"
+
+#: ../storage/framework/messages/8bee23301257e5aada606c3fc14af1120f23e712.php.php:110
+msgid "You currently don't have any qoutes saved"
+msgstr "Du har ikke nogle citater gemt lige nu. "
+
+#: ../storage/framework/messages/8bee23301257e5aada606c3fc14af1120f23e712.php.php:114
+msgid "Create new"
+msgstr "Lav ny"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:7
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:12
+msgid "Overview"
+msgstr "Oversigt"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:13
+msgid "Create"
+msgstr "Opret"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:19
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:24
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:2
+msgid "Contacts"
+msgstr "Kontakter"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:26
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:30
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:34
+msgid "New"
+msgstr "Ny"
+
+#: ../storage/framework/messages/8d21a64956db3ad496b297332edad46ae56fb970.php.php:32
+#: ../storage/framework/messages/db719945c98cfba24f3a2f079a8086e541163836.php.php:2
+msgid "Qoutes"
+msgstr "Citater"
+
+#: ../storage/framework/messages/9a7dbcdc8fbd2762e4e7ceac9ebc4fa322c04369.php.php:13
+msgid "Logout"
+msgstr "Log ud"
+
+#: ../storage/framework/messages/b42cb34417c34b5ea44f2fd7d56562568b3937e5.php.php:1
+msgid "Depotcategory"
+msgstr ""
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:12
+msgid "Basis Information"
+msgstr "Basis Information"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:51
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:112
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:120
+msgid "Comment"
+msgstr "Kommentar"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:121
+msgid "Action"
+msgstr "Handling"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:138
+msgid "Close"
+msgstr "Luk"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:151
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:175
+msgid "New Comment"
+msgstr "Ny Kommentar"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:160
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:186
+msgid "No"
+msgstr "Nej"
+
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:161
+#: ../storage/framework/messages/cd88f0579690f59e98f013fccbec2a24b24b91d6.php.php:187
+msgid "Yes"
+msgstr "Ja"

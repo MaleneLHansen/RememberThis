@@ -1,14 +1,12 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Note extends Model
 {
     
-	protected $table = 'note';
-	protected $fillable = ['name'];
-
-	
+    protected $table = 'note';
+    protected $fillable = ['name'];
 }
