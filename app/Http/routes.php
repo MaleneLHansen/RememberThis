@@ -66,7 +66,12 @@ Route::group(array('prefix' => 'project'), function () {
     Route::get('/info/{project}', ['as' => 'project.info', 'uses' => 'ProjectController@info']);
     Route::post('/{project}/newcomment', ['as' => 'comment.project.new', 'uses' => 'ProjectController@newComment']);
     Route::patch('/{project}/editcomment', ['as' => 'comment.project.edit', 'uses' => 'ProjectController@editComment']);
-    Route::delete('/comment', ['as' => 'comment.delete', 'uses' => 'ProjectController@deleteComment']);
+	    Route::delete('/comment', ['as' => 'comment.delete', 'uses' => 'ProjectController@deleteComment']);
+});
+
+Route::group(array('prefix' => 'status'), function (){
+    Route::get('/', ['as' => 'status.all', 'uses' => 'StatusController@index']);
+    Route::get('new', ['as' => 'status.new', 'uses' => 'StatusController@newStatus']);
 });
 
 

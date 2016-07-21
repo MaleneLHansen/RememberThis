@@ -33,6 +33,11 @@
                     <ul class="nav nav-third-level">
                     <li><a href="{{route('qoute.new')}}"><i class="fa fa-fw fa-plus"></i>{{_('New')}}</a></li>
                     </ul>
+                    <li><a href="{{route('status.all')}}"><i class="fa fa-fw fa-paragraph"></i> {{_('Status')}}</a></li> 
+                    <ul class="nav nav-third-level">
+                    <li><a href="{{route('status.new')}}"><i class="fa fa-fw fa-plus"></i>{{_('New')}}</a></li>
+                    </ul>
+
                 </ul>
                 
 

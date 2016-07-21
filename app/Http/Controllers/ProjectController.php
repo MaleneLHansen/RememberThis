@@ -22,7 +22,7 @@ class ProjectController extends Controller
 
     public function index(){
 
-		$project = Project::whereIn('status', [1,2])->get(); 
+		$project = Project::get(); 
     	return view('project.overview')->with('projects', $project)->with('type', null);
     }
 

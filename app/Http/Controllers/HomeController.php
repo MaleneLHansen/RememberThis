@@ -17,8 +17,8 @@ class HomeController extends Controller
 
     public function home(){
     	$qoutes = Qoute::orderByRaw('RAND()')->where('user_id', \Auth::user()->id)->where('active', 1)->take(4)->get();
-    	$finishedproject = Project::where('status', 2)->count();
-    	$unfinishedproject = Project::where('status', 1)->count(); 
+    	$finishedproject = Project::count();
+    	$unfinishedproject = Project::count(); 
 
 
     	return view('welcome')->with(['qoutes' => $qoutes, 'finishedCount' => $finishedproject, 'unfinishedCount' => $unfinishedproject]);

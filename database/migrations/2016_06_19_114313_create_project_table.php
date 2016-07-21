@@ -20,8 +20,9 @@ class CreateProjectTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('contact_id')->unsigned();
             $table->integer('projecttype_id')->unsigned();
+            $table->integer('status_id')->unsigned(); 
             $table->timestamps();
-            $table->integer('status')->default(1);
+            $table->integer('state')->default(1);
         });
     }
 
