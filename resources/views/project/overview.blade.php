@@ -18,8 +18,11 @@
 <div class="col-md-12">
 	<ul class="nav nav-tabs">
 		<li role="presentation" class={{$type == null ? "active" : "" }}><a href="{{route('project.all')}}">{{'All'}}</a></li>
-  		<li role="presentation" class={{$type == 'active' ? "active" : ""}}><a href="{{route('project.all.search', 'active')}}">{{_('Active')}} </a></li>
-  		<li role="presentation" class={{$type == 'completed' ? "active" : ""}}><a href="{{route('project.all.search', 'completed')}}"> {{_('Completed')}}</a></li>
+  		
+        @foreach ($status as $stat)
+        <li role="presentation" class={{$type == $stat->name ? "active" : ""}}><a href="{{route('project.all.search', $stat->name)}}">{{$stat->name}} </a></li>
+        @endforeach
+  		
 	</ul>
 </div>
 
@@ -59,7 +62,7 @@
             
             <td>{{$project->projecttype->name}}</td>
 
-            <td>{{$project->status == 1 ? _('Active') : _('Deactivated') }}</td>
+            <td>{{$project->status->name }}</td>
             
             <td>
                 

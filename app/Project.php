@@ -45,4 +45,9 @@ class Project extends Model
     {
     	return $this->hasMany('App\Comment')->where('status', 1);
     }
+
+    public function status(){
+        return $this->belongsTo('App\Status');
+    }
+
 }

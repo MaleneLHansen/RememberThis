@@ -8,10 +8,13 @@ use App\Http\Requests;
 use App\Project as Project; 
 use App\Contact as Contact; 
 use App\Comment as Comment; 
+use App\Status; 
+use App\Task;
 use App\ProjectType as ProjectType;
 use Carbon\Carbon as Carbon; 
 use App\Http\Requests\ProjectRequest as ProjectRequest; 
 use App\Http\Requests\CommentRequest as CommentRequest; 
+use App\Http\Requests\TaskRequest;
 
 
 class ProjectController extends Controller
@@ -23,7 +26,8 @@ class ProjectController extends Controller
     public function index(){
 
 		$project = Project::get(); 
-    	return view('project.overview')->with('projects', $project)->with('type', null);
+		$status = Status::get(); 
+    	return view('project.overview')->with('projects', $project)->with('type', null)->with('status', $status);
     }
 
     public function delete(Project $project){
@@ -36,7 +40,8 @@ class ProjectController extends Controller
 
     	$contacts = Contact::where('status', 1)->lists('name', 'id');
     	$projecttypes = ProjectType::where('status', 1)->lists('name', 'id');
-    	return view('project.edit')->with(array('project' => $project, 'contacts' => $contacts, 'types' => $projecttypes));
+    	$status = Status::lists('name', 'id');
+    	return view('project.edit')->with(array('project' => $project, 'contacts' => $contacts, 'types' => $projecttypes, 'status' => $status));
     }
 
     public function update(Project $project, ProjectRequest $request){
@@ -44,6 +49,7 @@ class ProjectController extends Controller
     	$project->contact_id = $request->input('contact');
 		$project->projecttype_id = $request->input('type');
 		$project->beginDate = Carbon::createFromFormat('d/m/Y', $request->input('beginDate'))->toDateTimeString();  
+		$project->status_id = $request->input('status_id');
     	$project->save();
     	return redirect()->route('project.info', $project->id);
     }
@@ -62,6 +68,9 @@ class ProjectController extends Controller
 		$project->contact_id = $request->input('contact');
 		$project->projecttype_id = $request->input('type');
 
+		$status = Status::where('name', 'Not started')->first();
+		$project->status_id = $status->id;
+
 		$project->beginDate = Carbon::createFromFormat('d/m/Y', $request->input('beginDate'))->toDateTimeString(); 
 
 
@@ -73,19 +82,21 @@ class ProjectController extends Controller
 	}
 
 	public function info(Project $project){
-		return view ('project.info')->with(['project' => $project]);
+		$tasks = Task::where('project_id', $project->id)->orderBy('order')->get(); 
+
+		return view('project.info')->with(['project' => $project, 'tasks' => $tasks]);
 	}
 
 	public function filter($type){
 
-		if ($type == 'active' ){
-			$projects = Project::where('status', 1)->get();
-		} else if ($type == 'all'){
-			$projects = Project::get(); 
-		} else if ($type == 'completed'){
-			$projects = Project::where('status', 2)->get();
-		}
-    	return view('project.overview')->with('projects', $projects)->with('type', $type);
+		$stat = Status::where('name', $type)->first(); 
+		$projects = Project::where('status_id', $stat->id)->get();
+		$status = Status::get(); 
+
+
+
+
+    	return view('project.overview')->with('projects', $projects)->with('type', $stat->name)->with('status', $status);
 	}
 
 	public function newComment(Project $project, CommentRequest $request){
@@ -112,6 +123,11 @@ class ProjectController extends Controller
 		$comment->status = 0;
 		$comment->save(); 
 		return redirect()->route('project.info', $comment->project->id);
+		
+	}
+
+	public function newTask(Project $project, TaskRequest $request){
+		$task = new Task($request->input()); 
 		
 	}
 }

@@ -44,7 +44,7 @@
 	<label for="discription">{{_('Status')}}</label>
 </div>
 <div class="col-md-7 col-sm-12">
-	<p>{{$project->status == 1 ? _('Active') : _('Completed')}}</p>
+	<p>{{$project->status->name}}</p>
 </div>
 </div>
 <div class="col-md-4 col-sm-12">
@@ -71,6 +71,15 @@
 
 @endforeach
 </div>
+<div class="col-md-4 col-sm-12"> 
+<h4>{{_('Tasks')}}
+<button id="newTask" type="button" class="btn btn-circle btn-success pull-right"><i class="fa fa-fw fa-plus"></i></button>
+</h4>
+<hr>
+
+
+</div>
+
 
 
 
@@ -105,6 +114,10 @@ $(document).ready(function(){
 		$('#commentDeleteId').val($(this).data('id'));
 		$('#deleteComment').modal('show');
 	});
+
+    $("#newTask").on('click', function(){
+        $("#newTaskModal").modal('show'); 
+    });
 });
 
 </script>
@@ -214,6 +227,29 @@ $(document).ready(function(){
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
     {!! Form::close() !!}
+</div><!-- /.modal -->
+
+
+<div class="modal" id="newTasModal" role="dialog">
+    {!! Form::model(null, ['route' => array('task.project.new', $project->id), 'method' => 'POST', 'id' => 'specificemail']) !!}
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{_('New Task')}}</h4>
+            </div>
+            <div class="modal-body">
+
+            {!! Form::textarea('body', null, array('class' => 'form-control')) !!}
+           
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-primary"><i></i>{{_('No')}}</button>
+                <button name="yes" type="submit"  class="btn btn-success"><i></i>{{_('Yes')}}</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    {!! Form::close() !!} 
 </div><!-- /.modal -->
 
 @endsection('content')

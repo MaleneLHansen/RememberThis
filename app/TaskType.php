@@ -18,4 +18,8 @@ class TaskType extends Model
     {
         return $this->hasMany('App\Task');
     }
+
+    public function scopeNotdeleted($query){
+        return $query->whereIn('status', [1, 2]);
+    }
 }

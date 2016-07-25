@@ -9,7 +9,7 @@
 @section('content')
 
 @if ($project->id > 0)
-{!! Form::model(null, ['route' => array('project.update', $project->id), 'method' => 'PATCH', 'class' => 'form-horizontal col-md-6']) !!}
+{!! Form::model($project, ['route' => array('project.update', $project->id), 'method' => 'PATCH', 'class' => 'form-horizontal col-md-6']) !!}
 
 @else
 
@@ -29,14 +29,14 @@
 <div class="form-group required">
     {!! Form::label('name', _('Name'),['class' => 'col-xs-4 control-label']) !!}
     <div class="col-sm-8">
-        {!! Form::text('name', $project->name, array('class' => 'form-control', 'required' => '')) !!}         
+        {!! Form::text('name', null, array('class' => 'form-control', 'required' => '')) !!}         
     </div>
 </div> 
 
 <div class="form-group required">
     {!! Form::label('description', _('Description'),['class' => 'col-xs-4 control-label']) !!}
     <div class="col-sm-8">
-        {!! Form::textarea('description', $project->description, array('class' => 'form-control', 'required' => '')) !!}         
+        {!! Form::textarea('description', null, array('class' => 'form-control', 'required' => '')) !!}         
     </div>
 </div> 
 
@@ -46,7 +46,7 @@
     {!! Form::label('beginDate', _('Start date'),['class' => 'col-xs-4 control-label']) !!}
     <div class="col-sm-8">
         <div class='input-group date' id='startDatePicker'>
-            {!! Form::text('beginDate', $project->beginDate->format('d/m/Y'), array('class' => 'form-control', 'required' => '', 'placeholder' => _('dd/mm/yyyy'))) !!}         
+            {!! Form::text('beginDate', $project->id > 0 ? $project->beginDate->format('d/m/Y') : null, array('class' => 'form-control', 'required' => '', 'placeholder' => _('dd/mm/yyyy'))) !!}         
             <span class="input-group-addon">
                 <span class="fa fa-calendar"></span>
             </span>
@@ -69,6 +69,17 @@
     </div>
 </div> 
 
+@if ($project->id > 0)
+
+<div class="form-group required">
+    {!! Form::label('type', _('Status'),['class' => 'col-xs-4 control-label']) !!}
+    <div class="col-sm-8">
+        {!! Form::select('status_id', $status, $project->status_id ,array('required' => '', 'id' => 'status')) !!}         
+    </div>
+</div> 
+
+@endif
+
 {!! Form::submit('Save', array('class' => 'btn btn-success pull-right'))!!}
 
 
@@ -84,6 +95,10 @@
 	$('#types').selectize({
     sortField: 'text'
 	});
+
+    $('#status').selectize({
+        sortField: 'text'
+    });
 
 </script>
 

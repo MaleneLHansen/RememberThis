@@ -25,6 +25,14 @@ Route::bind('project', function ($id) {
     return \App\Project::find($id);
 });
 
+Route::bind('status', function($id){
+    return \App\Status::find($id);
+});
+
+Route::bind('tasktype', function($id){
+    return \App\TaskType::find($id);
+});
+
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@home']);
 
 
@@ -67,11 +75,24 @@ Route::group(array('prefix' => 'project'), function () {
     Route::post('/{project}/newcomment', ['as' => 'comment.project.new', 'uses' => 'ProjectController@newComment']);
     Route::patch('/{project}/editcomment', ['as' => 'comment.project.edit', 'uses' => 'ProjectController@editComment']);
 	    Route::delete('/comment', ['as' => 'comment.delete', 'uses' => 'ProjectController@deleteComment']);
+    Route::post('/{project}/newTask', ['as' => 'task.project.new', 'uses' => 'ProjectController@newTask']);
 });
 
 Route::group(array('prefix' => 'status'), function (){
     Route::get('/', ['as' => 'status.all', 'uses' => 'StatusController@index']);
     Route::get('new', ['as' => 'status.new', 'uses' => 'StatusController@newStatus']);
+    Route::get('edit/{status}', ['as' => 'status.edit', 'uses' => 'StatusController@edit']);
+    Route::post('create', ['as' => 'status.create', 'uses' => 'StatusController@create']);
+    Route::patch('edit/{status}', ['as' => 'status.update', 'uses' => 'StatusController@update']);
+
+});
+
+Route::group(array('prefix' => 'tasktype'), function (){
+    Route::get('/', ['as' => 'tasktype.all', 'uses' => 'TaskTypeController@overview']); 
+    Route::get('new', ['as' => 'tasktype.new', 'uses' => 'TaskTypeController@newTaskType']); 
+    Route::get('edit/{tasktype}', ['as' => 'tasktype.edit', 'uses' => 'TaskTypeController@edit']); 
+    Route::post('create', ['as' => 'tasktype.create', 'uses' => 'TaskTypeController@create']); 
+    Route::patch('edit/{tasktype}', ['as' => 'tasktype.update', 'uses' => 'TaskTypeController@update']);
 });
 
 
